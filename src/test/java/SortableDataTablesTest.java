@@ -24,7 +24,7 @@ public class SortableDataTablesTest {
     }
 
     @Test
-    public void SortableDataTables() {
+    public void sortableDataTables() {
         this.driver.get("https://the-internet.herokuapp.com/tables");
         WebElement table = this.driver.findElement(By.xpath(
                 "//*[@id=\"table1\"]/tbody"));

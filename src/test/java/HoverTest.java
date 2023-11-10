@@ -24,7 +24,7 @@ public class HoverTest {
     }
 
     @Test
-    public void HoversTest() {
+    public void hoversTest() {
         this.driver.get("https://the-internet.herokuapp.com/hovers");
         WebElement iconFirst = this.driver.findElement(By.
                 xpath("//*[@id=\"content\"]/div/div[1]"));

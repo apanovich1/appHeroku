@@ -23,7 +23,7 @@ public class InputsTest {
     }
 
     @Test
-    public void Inputs() {
+    public void inputs() {
         this.driver.get("https://the-internet.herokuapp.com/inputs");
         WebElement input = this.driver.findElement(By.tagName("input"));
         input.sendKeys(new CharSequence[]{Keys.ARROW_UP});

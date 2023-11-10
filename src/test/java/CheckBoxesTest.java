@@ -23,27 +23,21 @@ public class CheckBoxesTest {
     }
 
     @Test
-    public void Checkboxes() {
+    public void checkboxes() {
         this.driver.get("https://the-internet.herokuapp.com/checkboxes");
         WebElement firstCheckBox = this.driver.findElement(By.
                 cssSelector("[type=checkbox]:nth-of-type(1)"));
-        boolean isFirstCheckBoxSelected = firstCheckBox.isSelected();
-        if (!isFirstCheckBoxSelected) {
-            firstCheckBox.click();
-        }
+        driver.findElement(By.xpath("//*[@id=\"checkboxes\"]/input[1]")).click();
 
         boolean selectionOfFirstCheckBox = firstCheckBox.isEnabled();
         Assert.assertTrue(selectionOfFirstCheckBox, "Checkbox should be selected");
+
         WebElement secondCheckBox = this.driver.findElement(By.
                 cssSelector("[type=checkbox]:nth-of-type(2)"));
-        boolean isSecondCheckBoxSelected = secondCheckBox.isSelected();
-        if (isSecondCheckBoxSelected) {
-            secondCheckBox.click();
-        }
-
+        driver.findElement(By.xpath("//*[@id=\"checkboxes\"]/input[2]")).click();
         boolean selectionOfSecondCheckBox = secondCheckBox.isEnabled();
-        Assert.assertFalse(selectionOfSecondCheckBox, "Checkbox should be unselected");
-    }
+        Assert.assertFalse(selectionOfSecondCheckBox,"Checkbox should be unselected");
+}
 
     @AfterMethod(alwaysRun = true)
     public void tearDown() {

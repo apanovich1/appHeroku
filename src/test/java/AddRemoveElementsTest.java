@@ -17,13 +17,13 @@ import java.util.concurrent.TimeUnit;
         public void setUp() {
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
-            options.addArguments(new String[]{"start-maximized"});
+            options.addArguments("start-maximized");
             this.driver = new ChromeDriver(options);
             this.driver.manage().timeouts().implicitlyWait(10L, TimeUnit.SECONDS);
         }
 
         @Test
-        public void AddRemoveElements() {
+        public void addRemoveElements() {
             this.driver.get("https://the-internet.herokuapp.com/add_remove_elements/");
             this.driver.findElement(By.xpath("//button[text()='Add Element']")).click();
             this.driver.findElement(By.xpath("//button[text()='Add Element']")).click();

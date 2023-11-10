@@ -26,7 +26,7 @@ public class NotificationMessagesTest {
     }
 
     @Test
-    public void NotificationMessagesTest() {
+    public void notificationMessagesTest() {
         this.driver.get("https://the-internet.herokuapp.com/notification_message_rendered");
         WebElement notificationButton = this.driver.findElement(By.
                 xpath("//*[@id=\"content\"]/div/p/a"));

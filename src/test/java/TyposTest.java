@@ -25,7 +25,7 @@ public class TyposTest {
     }
 
     @Test
-    public void Typos() {
+    public void typos() {
         this.driver.get("https://the-internet.herokuapp.com/typos");
         List<WebElement> paragraphs = this.driver.findElements(By.tagName("p"));
         if (paragraphs.size() >= 2) {
