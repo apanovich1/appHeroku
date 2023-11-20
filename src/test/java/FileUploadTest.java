@@ -33,7 +33,7 @@ public class FileUploadTest {
         driver.get("https://the-internet.herokuapp.com/upload");
 
         driver.findElement(By.id("file-upload")).sendKeys(
-                "C:\\Users\\annaa\\appHeroku\\src\\test\\resources\\fileToUpload.html");
+                "appHeroku/src/test/resources/fileToUpload.html");
         driver.findElement(By.id("file-submit")).click();
         String fileUploadedName = driver.findElement(By.id("uploaded-files")).getText();
         Assert.assertEquals(fileUploadedName,"fileToUpload.html",
